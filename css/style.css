@@ -1,0 +1,151 @@
+:root {
+    background: rgb(131,58,180);
+background: linear-gradient(223deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 59%, rgba(252,176,69,1) 100%);
+    --dark-color: rgba(0, 0, 0, 0.5);
+    --medium-color: #333;
+    --light-color: rgba(2, 250, 155, 0.267);
+    }
+    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body {
+    font-family: 'Calligraffitti', cursive;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--light-color);
+    padding: 2rem;
+    }
+    
+    .header{
+    height: 88vh;
+    width: 2000px;
+    background-image: linear-gradient(to bottom right, var(--light-color), var(--dark-color)), url("../img/gamingPC.jpg");
+    background-size: center;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+    }
+    
+    .text-box {
+    position: absolute;
+    top: 125%;
+    color: black;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    }
+    
+    .heading-primary {
+    /*text-transform: uppercase;*/
+    }
+    
+    .heading-primary-main {
+    display: block;
+    font-size: 3rem;
+    letter-spacing: 1,5rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    
+    }
+    
+    @keyframes moveInLeft {
+    0% {
+    opacity: 0;
+    transform: translateX(-100px);
+    }
+    
+    50% {
+    transform: translateX(222px);
+    }
+    
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+    }
+    
+    .heading-primary-sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    }
+    
+    @keyframes moveInRight {
+    0% {
+    opacity: 0;
+    transform: translateX(100px);
+    }
+    
+    50% {
+    transform: translateX(-1259);
+    }
+    
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+    }
+    main {
+    width: 75%;
+    height: 85vh;
+    margin: 0 auto;
+    background: var(--light-color);
+    padding: 8rem 2rem 3rem 2rem; /*top right bottom left*/
+    margin-top: -5rem;
+    text-align: justify;
+    color: whitesmoke;
+    
+    }
+    
+    img {
+    width: 500px;
+    float: right;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 2.2rem;
+    top: 150%;
+    
+    }
+    
+    .footer {
+    width: 75%;
+    margin: 0 auto;
+    background: var(--dark-color);
+    color: whitesmoke;
+    text-align: center;
+    padding: 3rem;
+    height: 1px;
+    }
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        color: aliceblue;
+        border: 2px solid white;
+        padding: 1rem;
+        margin: 2rem;
+        opacity: 0;
+        animation-name: btn;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-fill-mode: forwards;
+        transition-property: transform;
+        transition-duration: 3s;
+    }
+    
+    .btn:hover {
+        transform: rotateY(180deg);
+    }
+    
+    @keyframes btn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
